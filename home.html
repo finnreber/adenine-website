@@ -5,58 +5,141 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Us 💕</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body class="home-page">
 
-  <div class="bubbles" aria-hidden="true">
-    <span></span><span></span><span></span>
-    <span></span><span></span><span></span>
-  </div>
+  <canvas id="petal-canvas"></canvas>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
 
-  <header class="site-header">
-    <nav class="nav">
-      <span class="nav-logo">💕 us</span>
-      <a href="index.html" class="nav-logout">← not you?</a>
-    </nav>
+  <!-- Nav -->
+  <header class="site-nav">
+    <div class="nav-inner">
+      <span class="nav-brand">♡ us</span>
+      <nav class="nav-links">
+        <a href="#" class="nav-link nav-link--active">home</a>
+        <a href="#" class="nav-link">photos</a>
+        <a href="#" class="nav-link">notes</a>
+        <a href="#" class="nav-link">timeline</a>
+      </nav>
+      <a href="index.html" class="nav-back">← not you?</a>
+    </div>
   </header>
 
-  <main class="home-container">
+  <main>
 
+    <!-- Hero -->
     <section class="hero">
-      <h1 class="hero-title">Hey, you 🌸</h1>
-      <p class="hero-sub">This little corner of the internet is all about us.</p>
+      <div class="hero-inner">
+        <p class="eyebrow">welcome, my love</p>
+        <h1 class="hero-title">Hey, <em>you</em> 🌸</h1>
+        <p class="hero-sub">This little corner of the internet exists for one reason — you. Made with love, just for us.</p>
+
+        <!-- Days together counter -->
+        <div class="counter-card">
+          <div class="counter-block">
+            <span class="counter-num" id="days-count">—</span>
+            <span class="counter-label">days together</span>
+          </div>
+          <div class="counter-divider"></div>
+          <div class="counter-block">
+            <span class="counter-num" id="months-count">—</span>
+            <span class="counter-label">months of us</span>
+          </div>
+          <div class="counter-divider"></div>
+          <div class="counter-block">
+            <span class="counter-num" id="hours-count">—</span>
+            <span class="counter-label">hours i've loved you</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="coming-soon-grid">
-      <div class="placeholder-card">
-        <span class="card-icon">📸</span>
-        <h2>Our Photos</h2>
-        <p>Coming soon…</p>
+    <!-- Divider -->
+    <div class="section-divider">
+      <span class="div-line"></span>
+      <span class="div-text">our little world</span>
+      <span class="div-line"></span>
+    </div>
+
+    <!-- Cards grid -->
+    <section class="cards-section">
+      <div class="cards-grid">
+
+        <div class="feature-card feature-card--photos">
+          <div class="card-glow"></div>
+          <span class="card-tag">coming soon</span>
+          <div class="card-icon-wrap">
+            <span class="card-icon">📸</span>
+          </div>
+          <h2 class="card-title">Our Photos</h2>
+          <p class="card-desc">Every smile, every moment, every adventure — saved here forever.</p>
+          <div class="card-footer">
+            <span class="card-cta">Add photos →</span>
+          </div>
+        </div>
+
+        <div class="feature-card feature-card--notes">
+          <div class="card-glow"></div>
+          <span class="card-tag">coming soon</span>
+          <div class="card-icon-wrap">
+            <span class="card-icon">💌</span>
+          </div>
+          <h2 class="card-title">Love Notes</h2>
+          <p class="card-desc">The things I never want to forget to tell you.</p>
+          <div class="card-footer">
+            <span class="card-cta">Read notes →</span>
+          </div>
+        </div>
+
+        <div class="feature-card feature-card--adventures">
+          <div class="card-glow"></div>
+          <span class="card-tag">coming soon</span>
+          <div class="card-icon-wrap">
+            <span class="card-icon">🗺️</span>
+          </div>
+          <h2 class="card-title">Adventures</h2>
+          <p class="card-desc">Places we've been. Places we're going. Our map of us.</p>
+          <div class="card-footer">
+            <span class="card-cta">Explore →</span>
+          </div>
+        </div>
+
+        <div class="feature-card feature-card--timeline">
+          <div class="card-glow"></div>
+          <span class="card-tag">coming soon</span>
+          <div class="card-icon-wrap">
+            <span class="card-icon">⏳</span>
+          </div>
+          <h2 class="card-title">Our Timeline</h2>
+          <p class="card-desc">From day one to today — every chapter of our story.</p>
+          <div class="card-footer">
+            <span class="card-cta">View timeline →</span>
+          </div>
+        </div>
+
       </div>
-      <div class="placeholder-card">
-        <span class="card-icon">🗺️</span>
-        <h2>Our Adventures</h2>
-        <p>Coming soon…</p>
-      </div>
-      <div class="placeholder-card">
-        <span class="card-icon">💌</span>
-        <h2>Love Notes</h2>
-        <p>Coming soon…</p>
-      </div>
-      <div class="placeholder-card">
-        <span class="card-icon">⏳</span>
-        <h2>Our Timeline</h2>
-        <p>Coming soon…</p>
+    </section>
+
+    <!-- Quote section -->
+    <section class="quote-section">
+      <div class="quote-inner">
+        <p class="quote-mark">"</p>
+        <p class="quote-text">In all the world, there is no heart for me like yours. In all the world, there is no love for you like mine.</p>
+        <p class="quote-attr">— Maya Angelou</p>
       </div>
     </section>
 
   </main>
 
   <footer class="site-footer">
-    <p>Made with 💕 just for you</p>
+    <p>made with 💕 just for you · <span id="footer-date"></span></p>
   </footer>
 
+  <script src="static/js/petals.js"></script>
+  <script src="static/js/home.js"></script>
 </body>
 </html>
